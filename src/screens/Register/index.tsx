@@ -87,7 +87,7 @@ export default function RegisterScreen() {
                         value={email}
                         onChangeText={(text) => setEmail(text)}
                         returnKeyType="next"
-                        onSubmitEditing={() => passwordRef.current?.focus()}
+                        onEndEditing={() => passwordRef.current?.focus()}
                     />
 
                     <Input
