@@ -11,7 +11,7 @@ Algumas das tecnologias (principais) usadas foram:
 
 ## Desafios
 
-A parte mais desafiadora, na realidade, foi montar um app bonito e com elementos visuais agradáveis, para passar uma boa impressão no usuário.
+A parte mais desafiadora, na realidade, foi montar um app bonito e com elementos visuais agradáveis, para passar uma boa impressão ao usuário.
 
 ## Configuração do Ambiente React Native
 
