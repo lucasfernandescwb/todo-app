@@ -4,9 +4,10 @@ import { Feather } from '@expo/vector-icons'
 import { CloseBtn, Container, Heading, ItemContainer, Text } from "./styles"
 import Input from '../Input'
 import Button from '../Button'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Task } from '../../@types/models/Task'
 import { showMessage } from 'react-native-flash-message'
+import { TextInput } from 'react-native'
 
 interface TodoModalProps {
     modal: boolean
@@ -17,6 +18,8 @@ interface TodoModalProps {
 const TodoModal: React.FC<TodoModalProps> = ({ modal, setModal, addTodo }) => {
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
+
+    const descriptionRef = useRef<TextInput>(null)
 
     function closeModal() {
         setModal(false)
@@ -61,6 +64,8 @@ const TodoModal: React.FC<TodoModalProps> = ({ modal, setModal, addTodo }) => {
                         onChangeText={(text) => setTitle(text)}
                         maxLength={40}
                         numberOfLines={2}
+                        returnKeyType='next'
+                        onEndEditing={() => descriptionRef.current?.focus()}
                     />
                     <Text>{title.length}/40</Text>
                 </ItemContainer>
@@ -75,6 +80,8 @@ const TodoModal: React.FC<TodoModalProps> = ({ modal, setModal, addTodo }) => {
                         multiline
                         numberOfLines={4}
                         maxLength={100}
+                        ref={descriptionRef}
+                        onSubmitEditing={onSubmit}
                     />
 
                     <Text>{description.length}/100</Text>
