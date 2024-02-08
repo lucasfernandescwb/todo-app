@@ -1,3 +1,12 @@
+import { 
+  API_KEY, 
+  APP_ID, 
+  AUTH_DOMAIN, 
+  MESSAGING_SENDER_ID, 
+  PROJECT_ID, 
+  STORAGE_BUCKET 
+} from "@env"
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app"
 import { getAuth } from "firebase/auth"
@@ -6,12 +15,12 @@ import { getAuth } from "firebase/auth"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyClFJX7msvltyytmqtYgxM5v2AZv1wsZjk",
-  authDomain: "test-todo-app-auth-87f12.firebaseapp.com",
-  projectId: "test-todo-app-auth-87f12",
-  storageBucket: "test-todo-app-auth-87f12.appspot.com",
-  messagingSenderId: "294464206095",
-  appId: "1:294464206095:web:4ed0ea851acd21695eba7a"
+  apiKey: API_KEY,
+  authDomain: AUTH_DOMAIN,
+  projectId: PROJECT_ID,
+  storageBucket: STORAGE_BUCKET,
+  messagingSenderId: MESSAGING_SENDER_ID,
+  appId: APP_ID
 };
 
 // Initialize Firebase

@@ -74,7 +74,7 @@ export default function RegisterScreen() {
                     <Header>
                         <Heading>TODO APP</Heading>
 
-                        <Text>Bem-vindo, faça seu cadastro abaixo</Text>
+                        <Text>Realize seu cadastro abaixo</Text>
                     </Header>
 
                     <Input
