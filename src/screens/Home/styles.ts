@@ -31,12 +31,6 @@ export const Header = styled.View`
     align-items: center;
 `
 
-export const Logo = styled.Text`
-    font-size: ${RFPercentage(3.2)}px;
-    font-weight: bold;
-    color: white;
-`
-
 export const Heading = styled.Text`
     color: white;
     font-weight: bold;

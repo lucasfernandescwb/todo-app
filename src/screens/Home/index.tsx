@@ -15,7 +15,6 @@ import {
     Content, 
     Header, 
     Heading, 
-    Logo, 
     NewTodoContainer, 
     Tab, 
     TabTitle, 
@@ -111,7 +110,9 @@ export default function HomeScreen() {
         <PageLayoutWithSafeArea>
             <Container>
                 <Header>
-                    <Logo>{USER?.email ?? "Todo App"}</Logo>
+                    <Heading style={{ width: '65%' }} numberOfLines={1}>
+                        {USER?.username ? USER?.username : USER?.email ? USER?.email : "Todo App"}
+                    </Heading>
                     <Avatar size={32} logout action={signOut} />
                 </Header>
 
