@@ -4,6 +4,19 @@ Este é um projeto desenvolvido utilizando React Native com Typescript, Expo e F
 
 ## Configuração do Ambiente React Native
 
+Algumas das tecnologias (principais) usadas foram:
+ - Typescript
+ - Expo
+ - Firebase
+ - styled-compenents
+ - Redux ToolKit
+
+## Desafios
+
+A parte mais desafiadora, na realidade, foi montar um app bonito e com elementos visuais agradáveis, para passar uma boa impressão no usuário.
+
+## Configuração do Ambiente React Native
+
 Para configurar o ambiente de desenvolvimento React Native, siga o [passo a passo oficial](https://reactnative.dev/docs/environment-setup).
 
 ## Comandos
