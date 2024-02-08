@@ -2,8 +2,6 @@
 
 Este é um projeto desenvolvido utilizando React Native com Typescript, Expo e Firebase (para autenticação).
 
-## Configuração do Ambiente React Native
-
 Algumas das tecnologias (principais) usadas foram:
  - Typescript
  - Expo
