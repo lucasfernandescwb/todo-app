@@ -6,7 +6,7 @@ Algumas das tecnologias (principais) usadas foram:
  - Typescript
  - Expo
  - Firebase
- - styled-compenents
+ - styled-components
  - Redux ToolKit
 
 ## Desafios
