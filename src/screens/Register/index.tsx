@@ -100,6 +100,7 @@ export default function RegisterScreen() {
                         value={password}
                         onChangeText={(text) => setPassword(text)}
                         onSubmitEditing={handleRegister}
+                        ref={passwordRef}
                     />
 
                     <Button 
