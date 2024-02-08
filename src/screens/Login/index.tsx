@@ -9,6 +9,7 @@ import { useAppDispatch } from "../../hooks/useAppDispatch"
 import { signInWithEmailAndPassword } from "firebase/auth"
 import { auth } from "../../config/firebase"
 import { setUser } from "../../store/reducers/auth/actions"
+import { ErrorResponse } from "../../@types/models/Error"
 
 export default function LoginScreen() {
     const navigation = useNavigation()
@@ -44,8 +45,9 @@ export default function LoginScreen() {
             navigation.navigate("Home")
 
         } catch(err) {
-            // @ts-ignore
-            if (err.code.includes("auth/invalid-credential")) {
+            const errMsg = err as ErrorResponse
+
+            if (errMsg && errMsg.code.includes("auth/invalid-credential")) {
                 setError("Credenciais inválidas")
             }
         } finally {

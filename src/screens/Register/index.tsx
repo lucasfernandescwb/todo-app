@@ -9,6 +9,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth"
 import { auth } from "../../config/firebase"
 import { useAppDispatch } from "../../hooks/useAppDispatch"
 import { setUser } from "../../store/reducers/auth/actions"
+import { ErrorResponse } from "../../@types/models/Error"
 
 export default function RegisterScreen() {
     const navigation = useNavigation()
@@ -44,18 +45,17 @@ export default function RegisterScreen() {
             navigation.navigate("Home")
 
         } catch (err) {
-            // @ts-ignore
-            if (err.code.includes("email")) {
+            const errMsg = err as ErrorResponse
+
+            if (errMsg && errMsg.code.includes("email")) {
                 setError("Email inserido já está em uso.")
             }
 
-            // @ts-ignore
-            if (err.code.includes("auth/weak-password")) {
+            if (errMsg && errMsg.code.includes("auth/weak-password")) {
                 setError("A senha deve possuir no mínimo 6 caracteres.")
             }
 
-            // @ts-ignore
-            if (err.code.includes("auth/invalid-email")) {
+            if (errMsg && errMsg.code.includes("auth/invalid-email")) {
                 setError("Favor inserir um e-mail válido.")
             }
             
